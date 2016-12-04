@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bpmn/bmpn.iml" filepath="$PROJECT_DIR$/bpmn/bmpn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bpmn-over-activiti/bpmn-over-activiti.iml" filepath="$PROJECT_DIR$/bpmn-over-activiti/bpmn-over-activiti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bpmn-services.iml" filepath="$PROJECT_DIR$/bpmn-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bpmn-web/bpmn-web.iml" filepath="$PROJECT_DIR$/bpmn-web/bpmn-web.iml" />
+    </modules>
+  </component>
+</project>
