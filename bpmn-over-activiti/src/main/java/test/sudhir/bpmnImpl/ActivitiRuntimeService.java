@@ -24,9 +24,9 @@ class ActivitiRuntimeService implements BpmnRuntimeService {
     }
 
     @Override
-    public String startProcessInstanceById(String processDefinationId, Map<String, Object> variables) {
+    public String startProcessInstanceByKey(String processDefinationId, Map<String, Object> variables) {
 
-        return runtimeService.startProcessInstanceById(processDefinationId,variables).getId();
+        return runtimeService.startProcessInstanceByKey(processDefinationId,variables).getId();
 
     }
 }

@@ -84,7 +84,7 @@ public class PhotoService {
         String deploymentId=bpmnDriverManager.getBpmnDeploymentService().deploy("photoProcess",
                 "/home/sudhir/yadavsudhir405/activiti-spring-boot-webinar/activiti-spring-boot-webinar/src/main/resources/processes/upload.bpmn20.xml");
         System.out.println("Uplaod Process Defination is deployed with Id "+deploymentId);
-       return runtimeService.startProcessInstanceById("photoProcess", Collections.singletonMap("photos", photos));
+       return runtimeService.startProcessInstanceByKey("photoProcess", Collections.singletonMap("photos", photos));
 
     }
 

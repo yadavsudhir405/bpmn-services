@@ -3,6 +3,7 @@ package test.sudhir.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * @author sudhir
@@ -11,7 +12,8 @@ import javax.persistence.Id;
  *         Project:demo
  */
 @Entity
-public class Photo {
+public class Photo implements Serializable {
+    private static final long serialVersionUID = 1L;
         @Id
         @GeneratedValue
         private Long id;

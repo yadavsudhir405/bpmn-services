@@ -1,8 +1,11 @@
-package demo.javaDelegateService;
+package test.sudhir.javaDelegateService;
 
 import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.delegate.JavaDelegate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import test.sudhir.entity.Photo;
+import test.sudhir.service.PhotoService;
 
 /**
  * @author sudhir
@@ -10,10 +13,22 @@ import org.springframework.stereotype.Component;
  *         Time:7:05 PM
  *         Project:demo
  */
-@Component(value = "approvedUserTask")
+@Component(value = "activitiDelegate")
 public class ApprovedJavaTask implements JavaDelegate {
+
+    @Autowired
+    private PhotoService photoService;
     @Override
-    public void execute(DelegateExecution delegateExecution) {
+    public void execute(DelegateExecution execution) {
         System.out.println("*********************Photos got Received******************");
+
+        Photo photo = (Photo) execution.getVariable("photo");
+        Long photoId = photo.getId();
+       // System.out.println("integration: handling execution " + headers.toString());
+        System.out.println("integration: handling photo #" + photoId);
+
+        photoService.dogifyPhoto(photo);
+        System.out.println("Photo Dogified");
+
     }
 }

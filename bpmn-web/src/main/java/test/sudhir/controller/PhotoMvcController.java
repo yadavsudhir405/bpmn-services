@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import test.sudhir.bpmn.interfaces.BpmnTaskService;
 import test.sudhir.entity.Photo;
+import test.sudhir.model.PhotoTask;
 import test.sudhir.repository.PhotoRepository;
 import test.sudhir.service.EmailService;
 import test.sudhir.service.PhotoService;
@@ -86,8 +87,9 @@ public class PhotoMvcController {
         List<String> outstandingTaskIds = taskService.getTasksGroupWise("photoReviewers");
         if (0 < outstandingTaskIds.size()) {
             String taskId = outstandingTaskIds.iterator().next();
-            model.addAttribute("task", taskId);
-            List<Photo> photos = (List<Photo>) taskService.getVariable(taskId, "photos");
+            PhotoTask photoTask=new PhotoTask(taskId);
+            model.addAttribute("task", photoTask);
+            List<Photo> photos = (List<Photo>) taskService.getVariable(photoTask.getId(), "photos");
             model.addAttribute("photos", photos);
         }
         return "approve";

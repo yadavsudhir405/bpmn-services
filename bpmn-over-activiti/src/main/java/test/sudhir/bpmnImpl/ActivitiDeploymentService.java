@@ -27,7 +27,9 @@ public class ActivitiDeploymentService implements BpmnDeploymentService {
 
     @Override
     public String deploy(String resourceName, String resourcePath) {
-        try(InputStream inputStream1=new FileInputStream(resourcePath)){
+       return repositoryService.createDeployment().addClasspathResource("upload.bpmn20.xml").deploy().getId();
+
+        /*try(InputStream inputStream1=new FileInputStream(resourcePath)){
             return deploy(resourceName,inputStream1);
         }catch (FileNotFoundException e){
             e.printStackTrace();
@@ -35,7 +37,7 @@ public class ActivitiDeploymentService implements BpmnDeploymentService {
         }catch (IOException e){
             e.printStackTrace();
             throw new RuntimeException(e.getMessage());
-        }
+        }*/
     }
     private String deploy(String resourceName,InputStream inputStream){
         DeploymentBuilder deploymentBuilder=repositoryService.createDeployment();

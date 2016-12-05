@@ -2,6 +2,7 @@ package test.sudhir.bpmnImpl;
 
 import org.activiti.engine.TaskService;
 import org.activiti.engine.task.TaskQuery;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import test.sudhir.bpmn.interfaces.BpmnTaskService;
 
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 @Component
 public class ActivitiTaskService implements BpmnTaskService {
 
+    @Autowired
     private TaskService taskService;
 
     @Override

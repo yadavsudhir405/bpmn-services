@@ -12,6 +12,6 @@ public interface BpmnRuntimeService {
 
     void activateProcessInstanceById(String processInstanceId);
 
-    String  startProcessInstanceById(String processDefinationId, Map<String,Object> variables);
+    String  startProcessInstanceByKey(String processDefinationId, Map<String,Object> variables);
 
 }
