@@ -1,5 +1,7 @@
 package test.sudhir.bpmn.interfaces;
 
+import java.util.Map;
+
 /**
  * @author sudhir
  *         Date:3/12/16
@@ -9,5 +11,7 @@ package test.sudhir.bpmn.interfaces;
 public interface BpmnRuntimeService {
 
     void activateProcessInstanceById(String processInstanceId);
+
+    String  startProcessInstanceById(String processDefinationId, Map<String,Object> variables);
 
 }

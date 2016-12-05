@@ -2,10 +2,7 @@ package test.sudhir.bpmnImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import test.sudhir.bpmn.interfaces.BpmnDeploymentService;
-import test.sudhir.bpmn.interfaces.BpmnDriverManager;
-import test.sudhir.bpmn.interfaces.BpmnRepositoryService;
-import test.sudhir.bpmn.interfaces.BpmnRuntimeService;
+import test.sudhir.bpmn.interfaces.*;
 
 /**
  * @author sudhir
@@ -25,6 +22,9 @@ public class ActivitiDriverManager implements BpmnDriverManager{
     @Autowired
     private BpmnRepositoryService bpmnRepositoryService;
 
+    @Autowired
+    private BpmnIdentityService bpmnIdentityService;
+
     public BpmnDeploymentService getBpmnDeploymentService() {
         return  bpmnDeploymentService;
     }
@@ -36,4 +36,10 @@ public class ActivitiDriverManager implements BpmnDriverManager{
     public BpmnRepositoryService getBpmnRepositoryService() {
         return bpmnRepositoryService;
     }
+
+    @Override
+    public BpmnIdentityService getBpmnIdentityService() {
+        return bpmnIdentityService;
+    }
+
 }

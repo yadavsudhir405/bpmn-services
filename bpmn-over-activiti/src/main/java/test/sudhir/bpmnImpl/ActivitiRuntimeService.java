@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import test.sudhir.bpmn.interfaces.BpmnRuntimeService;
 
+import java.util.Map;
+
 /**
  * @author sudhir
  *         Date:3/12/16
@@ -19,5 +21,12 @@ class ActivitiRuntimeService implements BpmnRuntimeService {
 
     public void activateProcessInstanceById(String processInstanceId) {
         runtimeService.activateProcessInstanceById(processInstanceId);
+    }
+
+    @Override
+    public String startProcessInstanceById(String processDefinationId, Map<String, Object> variables) {
+
+        return runtimeService.startProcessInstanceById(processDefinationId,variables).getId();
+
     }
 }

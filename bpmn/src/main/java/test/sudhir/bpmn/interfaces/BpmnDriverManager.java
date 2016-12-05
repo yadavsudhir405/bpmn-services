@@ -13,4 +13,6 @@ public interface BpmnDriverManager {
     public BpmnRuntimeService getBpmnRuntimeService();
 
     public BpmnRepositoryService getBpmnRepositoryService();
+
+    public BpmnIdentityService getBpmnIdentityService();
 }

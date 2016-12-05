@@ -1,9 +1,8 @@
 package test.sudhir.bpmn.config;
 
-import org.activiti.engine.HistoryService;
-import org.activiti.engine.RepositoryService;
-import org.activiti.engine.RuntimeService;
-import org.activiti.engine.TaskService;
+
+import org.activiti.engine.*;
+import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.activiti.spring.ProcessEngineFactoryBean;
 import org.activiti.spring.SpringProcessEngineConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -27,7 +26,7 @@ public class BpmnActivitiConfig {
     private String driverClass="org.postgresql.Driver";
 
     //@Value("{$url}")
-    private String url="jdbc:postgresql://localhost:5432/muflow";
+    private String url="jdbc:postgresql://localhost:5432/muflow_test";
 
     //@Value("{$username}")
     private String username="postgres";
@@ -58,40 +57,56 @@ public class BpmnActivitiConfig {
     }
 
     @Bean
-    public SpringProcessEngineConfiguration springProcessEngineConfiguration(){
+    public ProcessEngineConfiguration processEngineConfiguration(){
         SpringProcessEngineConfiguration springProcessEngineConfiguration
                 =new SpringProcessEngineConfiguration();
         springProcessEngineConfiguration.setDataSource(simpleDataSource());
-        //springProcessEngineConfiguration.setTransactionManager(transactionManager());
-        springProcessEngineConfiguration.setDatabaseSchemaUpdate(Boolean.toString(true));
+        springProcessEngineConfiguration.setTransactionManager(transactionManager());
+        springProcessEngineConfiguration.setDatabaseSchemaUpdate("true");
         return springProcessEngineConfiguration;
     }
 
     @Bean
-    public ProcessEngineFactoryBean processEngine(){
+    public ProcessEngineFactoryBean processEngineFactoryBean(){
         ProcessEngineFactoryBean processEngineFactoryBean
                 =new ProcessEngineFactoryBean();
-        processEngineFactoryBean.setProcessEngineConfiguration(springProcessEngineConfiguration());
-        return   processEngineFactoryBean;
+        processEngineFactoryBean.setProcessEngineConfiguration((ProcessEngineConfigurationImpl) processEngineConfiguration());
+
+        return processEngineFactoryBean;
     }
 
     @Bean
+    public ProcessEngine processEngine(){
+        ProcessEngine processEngine=null;
+        try {
+            processEngine= processEngineFactoryBean().getObject();
+        } catch (Exception e) {
+            System.out.println("PrcessEngine is null");
+        }
+        return processEngine;
+    }
+    @Bean
     public RepositoryService repositoryService(){
-        return processEngine().getProcessEngineConfiguration().getRepositoryService();
+        return processEngine().getRepositoryService();
     }
 
     @Bean
     public RuntimeService runtimeService(){
-        return processEngine().getProcessEngineConfiguration().getRuntimeService();
+        return processEngine().getRuntimeService();
     }
 
     @Bean
     public TaskService taskService(){
-        return processEngine().getProcessEngineConfiguration().getTaskService();
+        return processEngine().getTaskService();
+    }
+
+    @Bean
+    public  IdentityService identityService(){
+        return processEngine().getIdentityService();
     }
 
     @Bean
     public HistoryService historyService(){
-        return  processEngine().getProcessEngineConfiguration().getHistoryService();
+        return  processEngine().getHistoryService();
     }
 }

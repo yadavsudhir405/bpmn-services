@@ -9,4 +9,6 @@ package test.sudhir.bpmn.interfaces;
 public interface BpmnDeploymentService {
 
     void deploy(String processDefination);
+
+    public String deploy(String resourceName,String resourcePath);
 }
