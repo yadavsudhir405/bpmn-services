@@ -1,7 +1,7 @@
 package test.sudhir.bpmnImpl;
 
+import test.sudhir.BpmnUser;
 import org.activiti.engine.identity.User;
-import test.sudhir.bpmn.interfaces.BpmnUser;
 
 /**
  * @author sudhir

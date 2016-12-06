@@ -2,7 +2,7 @@ package test.sudhir.bpmnImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import test.sudhir.bpmn.interfaces.*;
+import test.sudhir.*;
 
 /**
  * @author sudhir
@@ -11,7 +11,7 @@ import test.sudhir.bpmn.interfaces.*;
  *         Project:bpmn-service
  */
 @Component(value = "bpmnDriverManager")
-public class ActivitiDriverManager implements BpmnDriverManager{
+public class ActivitiDriverManager implements BpmnDriverManager {
 
     @Autowired
     private BpmnDeploymentService bpmnDeploymentService;

@@ -1,9 +1,9 @@
 package test.sudhir.bpmnImpl;
 
+import test.sudhir.BpmnRuntimeService;
 import org.activiti.engine.RuntimeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import test.sudhir.bpmn.interfaces.BpmnRuntimeService;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package test.sudhir.bpmn.interfaces;
+package test.sudhir;
 
 /**
  * @author sudhir

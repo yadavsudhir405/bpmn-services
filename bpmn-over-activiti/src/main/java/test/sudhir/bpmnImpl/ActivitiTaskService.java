@@ -4,7 +4,7 @@ import org.activiti.engine.TaskService;
 import org.activiti.engine.task.TaskQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import test.sudhir.bpmn.interfaces.BpmnTaskService;
+import test.sudhir.BpmnTaskService;
 
 import java.util.List;
 import java.util.Map;

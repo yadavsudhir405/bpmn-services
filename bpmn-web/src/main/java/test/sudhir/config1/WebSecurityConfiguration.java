@@ -1,6 +1,8 @@
-package test.sudhir.config;
+package test.sudhir.config1;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 /**
  * @author sudhir
@@ -9,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
  *         Project:demo
  */
 @Configuration
-public class WebSecurityConfiguration /*extends WebSecurityConfigurerAdapter*/ {
-    /*protected void configure(HttpSecurity http) throws Exception {
+public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
+    protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
                 .antMatchers("/triggerEmail").hasAuthority("photoReviewers")
@@ -19,5 +21,5 @@ public class WebSecurityConfiguration /*extends WebSecurityConfigurerAdapter*/ {
                 .and()
                 .csrf().disable()
                 .httpBasic();
-    }*/
+    }
 }

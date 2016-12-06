@@ -1,4 +1,4 @@
-package test.sudhir.config;
+package test.sudhir.config1;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

@@ -1,7 +1,7 @@
 package test.sudhir.bpmnImpl;
 
 import org.activiti.engine.identity.Group;
-import test.sudhir.bpmn.interfaces.BpmnGroup;
+import test.sudhir.BpmnGroup;
 
 /**
  * @author sudhir

@@ -1,11 +1,11 @@
 package test.sudhir.bpmnImpl;
 
+import test.sudhir.BpmnDeploymentService;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.DeploymentBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import test.sudhir.bpmn.interfaces.BpmnDeploymentService;
 
 import java.io.*;
 

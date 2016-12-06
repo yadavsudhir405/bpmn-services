@@ -1,6 +1,10 @@
 package test.sudhir.controller;
 
 
+import test.sudhir.BpmnTaskService;
+import test.sudhir.model.PhotoTask;
+import test.sudhir.repository.PhotoRepository;
+import test.sudhir.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
@@ -10,11 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import test.sudhir.bpmn.interfaces.BpmnTaskService;
 import test.sudhir.entity.Photo;
-import test.sudhir.model.PhotoTask;
-import test.sudhir.repository.PhotoRepository;
-import test.sudhir.service.EmailService;
 import test.sudhir.service.PhotoService;
 
 import java.io.IOException;

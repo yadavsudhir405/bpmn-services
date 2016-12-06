@@ -1,12 +1,12 @@
 package test.sudhir.javaDelegateService;
 
 
+import test.sudhir.repository.PhotoRepository;
 import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import test.sudhir.entity.Photo;
-import test.sudhir.repository.PhotoRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;

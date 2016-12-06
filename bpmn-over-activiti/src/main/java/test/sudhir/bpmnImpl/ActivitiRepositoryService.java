@@ -3,7 +3,7 @@ package test.sudhir.bpmnImpl;
 import org.activiti.engine.RepositoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import test.sudhir.bpmn.interfaces.BpmnRepositoryService;
+import test.sudhir.BpmnRepositoryService;
 
 /**
  * @author sudhir

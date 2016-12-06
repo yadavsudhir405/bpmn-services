@@ -1,9 +1,7 @@
-package test.sudhir.config;
+package test.sudhir.config1;
 
 
 import doge.photo.DogePhotoManipulator;
-import org.activiti.engine.ProcessEngine;
-import org.activiti.engine.delegate.DelegateExecution;
 /*import org.activiti.spring.integration.ActivitiInboundGateway;
 import org.activiti.spring.integration.IntegrationActivityBehavior;*/
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,16 +12,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.integration.dsl.support.GenericHandler;
 import org.springframework.integration.support.MessageBuilder;*/
-import test.sudhir.bpmn.interfaces.BpmnDriverManager;
-import test.sudhir.bpmn.interfaces.BpmnGroup;
-import test.sudhir.bpmn.interfaces.BpmnIdentityService;
-import test.sudhir.bpmn.interfaces.BpmnUser;
-import test.sudhir.entity.Photo;
+import test.sudhir.BpmnDriverManager;
+import test.sudhir.BpmnGroup;
+import test.sudhir.BpmnIdentityService;
+import test.sudhir.BpmnUser;
 import test.sudhir.javaDelegateService.JavaDelegateService;
 import test.sudhir.javaDelegateService.JavaService;
-import test.sudhir.service.PhotoService;
-
-import java.util.Map;
 
 /**
  * @author sudhir

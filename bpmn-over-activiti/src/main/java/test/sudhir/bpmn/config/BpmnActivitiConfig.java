@@ -6,7 +6,6 @@ import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.activiti.spring.ProcessEngineFactoryBean;
 import org.activiti.spring.SpringProcessEngineConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 
@@ -19,7 +18,7 @@ import java.sql.Driver;
  *         Time:3:22 PM
  *         Project:bpmn-service
  */
-@Configuration
+//@Configuration
 public class BpmnActivitiConfig {
 
     //@Value("{$driverClass}")

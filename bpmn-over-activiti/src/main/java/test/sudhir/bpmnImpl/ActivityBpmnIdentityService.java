@@ -1,12 +1,12 @@
 package test.sudhir.bpmnImpl;
 
+import test.sudhir.BpmnGroup;
+import test.sudhir.BpmnIdentityService;
+import test.sudhir.BpmnUser;
 import org.activiti.engine.IdentityService;
 import org.activiti.engine.identity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import test.sudhir.bpmn.interfaces.BpmnGroup;
-import test.sudhir.bpmn.interfaces.BpmnIdentityService;
-import test.sudhir.bpmn.interfaces.BpmnUser;
 
 /**
  * @author sudhir
