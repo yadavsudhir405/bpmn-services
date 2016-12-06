@@ -24,6 +24,7 @@
         <processorPath useClasspath="true" />
         <module name="bmpn" />
         <module name="bpmn-over-activiti" />
+        <module name="bpmn-over-activiti-spring-boot-starter" />
         <module name="bpmn-service" />
         <module name="bpmn-services" />
         <module name="bpmn-web" />
@@ -32,6 +33,7 @@
     <bytecodeTargetLevel>
       <module name="bmpn" target="1.8" />
       <module name="bpmn-over-activiti" target="1.8" />
+      <module name="bpmn-over-activiti-spring-boot-starter" target="1.5" />
       <module name="bpmn-service" target="1.5" />
       <module name="bpmn-services" target="1.5" />
       <module name="bpmn-web" target="1.8" />

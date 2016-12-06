@@ -18,6 +18,7 @@
                 <module>bpmn</module>
                 <module>bpmn-over-activiti</module>
                 <module>bpmn-web</module>
+                <module>bpmn-over-activiti-spring-boot-starter</module>
             </modules>
         </profile>
     </profiles>

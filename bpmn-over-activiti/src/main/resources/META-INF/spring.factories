@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=test.activiti.bpmn.config.BpmnAutoActivitiConfig
